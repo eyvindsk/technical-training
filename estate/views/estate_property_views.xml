@@ -55,5 +55,10 @@
 				</form>
 			</field>
 		</record>
+
+        <record>
+            <search>
+            </search>
+        </record>
 	</data>
 </odoo>
