@@ -11,7 +11,7 @@
 			<field name="arch" type="xml">
 				<tree string="Properties">
 					<field name="name" string="Title" />
-					<field name="postcode" string="Postcode" />
+					<field name="postcode" string="Postcode"/>
 					<field name="bedrooms" string="Bedrooms" />
 					<field name="living_area" string="Living Area sqm" />
 					<field name="expected_price" string="Expected price" />
