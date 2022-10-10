@@ -24,4 +24,12 @@ class RealEstate(models.Model):
         help = "Select the orientation you want to see the garden"
     )
     active = fields.Boolean()
+    state = fields.Selection(
+        string = "State",
+        selection = [("new","New"), ("offer_received","Offer Received"), 
+                        ("offer_accepted","Offer Accepted"), ("sold","sold"), ("canceled","Canceled")],
+        help = "Select state for the property"
+        copy = False,
+        default="New",
+        required=True)
 
