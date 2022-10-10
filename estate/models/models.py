@@ -10,7 +10,7 @@ class RealEstate(models.Model):
     name = fields.Char(required=True)
     description = fields.Text()
     postcode = fields.Char()
-    date_availability = fields.Date(copy=False, default=date.Today() + timedelta(days=90))
+    date_availability = fields.Date(copy=False, default=date.today() + timedelta(days=90))
     expected_price = fields.Float(required=True)
     selling_price = fields.Float(readonly=True, copy=False)
     bedrooms = fields.Integer(default=2)
@@ -23,5 +23,5 @@ class RealEstate(models.Model):
         selection = [("north","North"), ("south","South"), ("west","West"), ("east","East")],
         help = "Select the orientation you want to see the garden"
     )
-
+    active = fields.Boolean()
 
