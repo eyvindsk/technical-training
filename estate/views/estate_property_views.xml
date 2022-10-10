@@ -52,8 +52,9 @@
 								<field name="garden_area" />
 								<field name="garden_orientation" />
 							</group>
-						</notebook>
-                        </page>
+						    </page>
+                        </notebook>
+                        
                        
 					</sheet>
 				</form>
