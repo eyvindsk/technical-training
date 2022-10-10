@@ -24,7 +24,7 @@ class RealEstate(models.Model):
         selection = [("north","North"), ("south","South"), ("west","West"), ("east","East")],
         help = "Select the orientation you want to see the garden"
     )
-    active = fields.Boolean()
+    active = fields.Boolean(default=True)
     state = fields.Selection(
         string = "State",
         selection = [("new","New"), ("offer_received","Offer Received"), 
@@ -33,4 +33,6 @@ class RealEstate(models.Model):
         copy = False,
         default="new",
         required=True)
+    
+
 

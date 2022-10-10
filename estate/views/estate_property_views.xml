@@ -73,7 +73,7 @@
                     <field name="living_area"/>
                     <field name="facades"/>
                     <separator/>
-                    <filter string="Available" name="inactive" domain="[('active', '=', False)]"/>
+                    <filter string="Inactive" name="active" domain="[('active', '=', False)]"/>
                     <separator/>
                     <filter string="New" name="state" domain="[('state', '=', 'new')]"/>
                     <filter string="Offer Received" name="state" domain="[('state', '=', 'offer_received')]"/>
@@ -85,5 +85,34 @@
                 </search>
             </field>
         </record>
-	</data>
+        
+        <record id="property_type_action" model="ir.actions.act_window">
+			<field name="name">Property types</field>
+			<field name="res_model">estate.property.type</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+			<record id="properties_type_view_tree" model="ir.ui.view">
+			<field name="name">estate.property.type.tree</field>
+			<field name="model">estate.property.type</field>
+			<field name="arch" type="xml">
+				<tree string="Property types">
+					<field name="name" string="Title" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="properties_type_view_form" model="ir.ui.view">
+			<field name="name">estate.property.type.form</field>
+			<field name="model">estate.property.type</field>
+			<field name="arch" type="xml">
+				<form string="Property type">
+					<sheet>
+						<h1>
+							<field name="name" string="Title"/>
+						</h1>
+					</sheet>
+				</form>
+			</field>
+		</record>
+    </data>
 </odoo>
