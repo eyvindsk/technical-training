@@ -68,7 +68,12 @@
                     <field name="living_area"/>
                     <field name="facades"/>
                     <separator/>
-                    <filter string="Avalable" name="inactive" domain="[('active', '=', False)]"/>
+                    <filter string="Available" name="inactive" domain="[('active', '=', False)]"/>
+                    <separator/>
+                    <filter string="New" name="state" domain="[('state', '=', 'new')]"/>
+                    <filter string="Offer Received" name="state" domain="[('state', '=', 'offer_received')]"/>
+                    <filter string="Offer Accepted" name="state" domain="[('state', '=', 'offer_accepted')]"/>
+                    <filter string="Sold" name="state" domain="[('state', '=', 'sold')]"/>
                     <group expand="1" string="Group By">
                         <filter string="Postcode" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
                     </group>
