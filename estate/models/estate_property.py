@@ -34,8 +34,8 @@ class RealEstate(models.Model):
         default="new",
         required=True)
     property_type_id = fields.Many2one("estate.property.type")
-    salesman = fields.Char()
-    buyer = fields.Char()
+    salesman = fields.Many2one("res.users" string="Salesman" default=lambda self: self.env.user) #fields.Char()
+    buyer = fields.Many2one("res.partner" string="Partner") #fields.Char()
     
 
 
