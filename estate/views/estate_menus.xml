@@ -1,9 +1,9 @@
 <odoo>
 
 <data>
-<menuitem id="ra_menu_root" name="Advertisement">
-    <menuitem id="ra_first_level_menu" name="Properties">
-        <menuitem id="test_model_menu_action" action="properties_model_action"/>
+<menuitem id="ra_menu_root" name="Real Estate">
+    <menuitem id="ra_first_level_menu" name="Adverstisement">
+        <menuitem id="estate_model_menu_action" name="Properties" action="properties_model_action"/>
     </menuitem>
 </menuitem>
 </data>
