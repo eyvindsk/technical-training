@@ -3,8 +3,8 @@ from odoo import fields, models
 
 class RealEstate(models.Model):
 
-    name = "estate.property"
-    description = "Contains the fields of the real estate properties"
+    _name = "estate.property"
+    _description = "Contains the fields of the real estate properties"
 
     name = fields.Char(required=True)
     description = fields.Text()
