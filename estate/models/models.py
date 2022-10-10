@@ -31,6 +31,6 @@ class RealEstate(models.Model):
                         ("offer_accepted","Offer Accepted"), ("sold","sold"), ("canceled","Canceled")],
         help = "Select state for the property",
         copy = False,
-        default="New",
+        default="new",
         required=True)
 
