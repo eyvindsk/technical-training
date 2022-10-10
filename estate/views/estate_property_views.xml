@@ -27,8 +27,9 @@
 				<form string="Property">
 					<sheet>
 						<h1>
-							<field name="name" />
+							<field name="name" string="Title"/>
 						</h1>
+                        <group>
 						<group>
 							<group>
 								<field name="postcode" />
@@ -51,6 +52,7 @@
 								<field name="garden_orientation" />
 							</group>
 						</notebook>
+                        </group>
 					</sheet>
 				</form>
 			</field>
