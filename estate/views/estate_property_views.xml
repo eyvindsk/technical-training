@@ -57,7 +57,7 @@
 		</record>
 
         <record id="view_properties_tree_search" model="ir.ui.view">
-            <field name="name">estate.property.search/field>
+            <field name="name">estate.property.search</field>
             <field name="model">estate.property</field>
             <field name="arch" type="xml">
                 <search string="Search properties">
