@@ -28,7 +28,7 @@ class RealEstate(models.Model):
         string = "State",
         selection = [("new","New"), ("offer_received","Offer Received"), 
                         ("offer_accepted","Offer Accepted"), ("sold","sold"), ("canceled","Canceled")],
-        help = "Select state for the property"
+        help = "Select state for the property",
         copy = False,
         default="New",
         required=True)
