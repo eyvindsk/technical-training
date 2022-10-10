@@ -1,5 +1,6 @@
 from unicodedata import decimal
 from odoo import fields, models
+from datetime import timedelta, date
 
 class RealEstate(models.Model):
 
@@ -9,10 +10,10 @@ class RealEstate(models.Model):
     name = fields.Char(required=True)
     description = fields.Text()
     postcode = fields.Char()
-    date_availability = fields.Date()
+    date_availability = fields.Date(copy=False, default=date.Today() + timedelta(days=90))
     expected_price = fields.Float(required=True)
-    selling_price = fields.Float()
-    bedrooms = fields.Integer()
+    selling_price = fields.Float(readonly=True, copy=False)
+    bedrooms = fields.Integer(default=2)
     living_area = fields.Integer()
     facades = fields.Integer()
     garage = fields.Boolean()
